@@ -26,6 +26,8 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -69,14 +71,19 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,987.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,1064" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProductsFile" />
       <Variable x:TypeArguments="x:String" Name="EmailAdress" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="MainProductList" />
       <Variable x:TypeArguments="x:String" Name="OfferFile" />
+      <Variable x:TypeArguments="sd:DataTable" Name="CompariDataTable" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -98,14 +105,25 @@
         <InArgument x:TypeArguments="x:String" x:Key="ExcelFilePath">[ProductsFile]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Comment Text="{x:Null}" DisplayName="Compari.ro extraction" sap:VirtualizedContainerService.HintSize="433.6,36.8" sap2010:WorkflowViewState.IdRef="Comment_1" />
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extract products from Compari.ro" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CompariExtraction.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="ProductList">
+          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="MainProductList" />
+        </InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="DataTableOut">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="CompariDataTable" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
     <ui:Comment Text="{x:Null}" DisplayName="Media Galaxy extraction" sap:VirtualizedContainerService.HintSize="433.6,36.8" sap2010:WorkflowViewState.IdRef="Comment_2" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create excel file to send" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ExcelBuilder.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="ExcelOfferFile">
           <VisualBasicReference x:TypeArguments="x:String" ExpressionText="OfferFile" />
         </OutArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="CompariDataTable" />
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="CompariDataTable">
+          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="CompariDataTable" />
+        </InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="MediaGalaxyTable" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
