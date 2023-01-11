@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2131.2,1466.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2356.8,1466.4" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -77,13 +77,14 @@
       <AssemblyReference>System.Private.Xml</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,1064" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="496,1140.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="ProductsFile" />
       <Variable x:TypeArguments="x:String" Name="EmailAdress" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="MainProductList" />
       <Variable x:TypeArguments="x:String" Name="OfferFile" />
       <Variable x:TypeArguments="sd:DataTable" Name="CompariDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="MediaGalaxyDataTable" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -107,23 +108,24 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extract products from Compari.ro" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="CompariExtraction.xaml">
       <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="ProductList">[MainProductList]</InArgument>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="DataTableOut">[CompariDataTable]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Extract products from MediaGalaxy" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="MediaGalaxyExtraction.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="DataTableOut">
+          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="MediaGalaxyDataTable" />
+        </OutArgument>
         <InArgument x:TypeArguments="scg:List(x:String)" x:Key="ProductList">
           <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="MainProductList" />
         </InArgument>
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="DataTableOut">
-          <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="CompariDataTable" />
-        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:Comment Text="{x:Null}" DisplayName="Media Galaxy extraction" sap:VirtualizedContainerService.HintSize="433.6,36.8" sap2010:WorkflowViewState.IdRef="Comment_2" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create excel file to send" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ExcelBuilder.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="ExcelOfferFile">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="OfferFile" />
-        </OutArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="CompariDataTable">
-          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="CompariDataTable" />
-        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ExcelOfferFile">[OfferFile]</OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="CompariDataTable">[CompariDataTable]</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="MediaGalaxyTable" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
