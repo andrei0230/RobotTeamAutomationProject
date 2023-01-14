@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1194,647</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2356.8,1280</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="90">
@@ -121,7 +121,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="690,385" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="588.8,386.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="numeFurnizor" />
       <Variable x:TypeArguments="x:String" Name="numeProdus" />
@@ -133,14 +133,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BuildDataTable DataTable="[dataTable]" DisplayName="Build Data Table Produse" sap:VirtualizedContainerService.HintSize="628,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Product&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Supplier&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Product&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Compari.ro - Compararea produselor si preturilor din stocul magazinelor online p" sap:VirtualizedContainerService.HintSize="628,52" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="97541c94-5f5f-48ba-b5b4-eeccf9d3ce83" Version="V2">
+    <ui:BuildDataTable DataTable="[dataTable]" DisplayName="Build Data Table Produse" sap:VirtualizedContainerService.HintSize="526.4,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Product&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Supplier&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Product_Id&quot; msdata:AutoIncrement=&quot;true&quot; msdata:Caption=&quot;&quot; type=&quot;xs:int&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint1&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Product&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;      &lt;xs:unique name=&quot;Constraint2&quot;&gt;&#xD;&#xA;        &lt;xs:selector xpath=&quot;.//TableName&quot; /&gt;&#xD;&#xA;        &lt;xs:field xpath=&quot;Product_Id&quot; /&gt;&#xD;&#xA;      &lt;/xs:unique&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Compari.ro - Compararea produselor si preturilor din stocul magazinelor online p" sap:VirtualizedContainerService.HintSize="526.4,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="97541c94-5f5f-48ba-b5b4-eeccf9d3ce83" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap2010:Annotation.AnnotationText="Toate activitatile trebuie adaugate in for each iar in campul 'In' numele listei. &#xA;" DisplayName="Do" sap:VirtualizedContainerService.HintSize="498,798" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence sap2010:Annotation.AnnotationText="Toate activitatile trebuie adaugate in for each iar in campul 'In' numele listei. &#xA;" DisplayName="Do" sap:VirtualizedContainerService.HintSize="497.6,200" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -148,13 +148,13 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="436,641" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[ProductList]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="435.2,645.6" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[ProductList]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="Product" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Cautare produse pe Compari.ro" sap:VirtualizedContainerService.HintSize="400,515" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <Sequence DisplayName="Cautare produse pe Compari.ro" sap:VirtualizedContainerService.HintSize="400,519.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="ButtonText" />
                     </Sequence.Variables>
@@ -164,7 +164,7 @@
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Va primi valoarea din fisierul excel prin intermediul unei liste&#xA;" ClickBeforeMode="Single" DisplayName="Type Into Cautati" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="338,124" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="97541c94-5f5f-48ba-b5b4-eeccf9d3ce83" Text="[Product +&quot;[k(enter)]&quot;]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="Va primi valoarea din fisierul excel prin intermediul unei liste&#xA;" ClickBeforeMode="Single" DisplayName="Type Into Cautati" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="337.6,128.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="97541c94-5f5f-48ba-b5b4-eeccf9d3ce83" Text="[Product +&quot;[k(enter)]&quot;]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.compari.ro/" DesignTimeRectangle="459, 175, 358, 41" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' class='c-search__input' aaname='' /&gt;" Guid="5fe8ee7c-b36f-4575-8d64-4deaab1c21a3" ImageBase64="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" InformativeScreenshot="44643487788724079efcfca931b61ab3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Compari.ro - Compararea produselor si preturilor din stocul magazinelor online partenere' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -182,7 +182,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NTypeInto>
-                    <uix:NGetText DisplayName="Get Text Button" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="97541c94-5f5f-48ba-b5b4-eeccf9d3ce83" TextString="[ButtonText]" Version="V3">
+                    <uix:NGetText DisplayName="Get Text Button" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="97541c94-5f5f-48ba-b5b4-eeccf9d3ce83" TextString="[ButtonText]" Version="V3">
                       <uix:NGetText.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.compari.ro/CategorySearch.php?st=poco+x3+pro+256" DesignTimeRectangle="1183, 494, 202, 28" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Comparați'" FullSelectorArgument="&lt;webctrl class='button*' parentid='normal-product-list' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='button*' parentid='normal-product-list' tag='A' type='' /&gt;" Guid="835a94a6-2fad-43a1-bf75-2507df7f9b25" InformativeScreenshot="77bfc274189ec6a00da18236c9362376.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Cautare: poco x3 pro 256' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -199,7 +199,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </uix:NGetText>
-                    <If Condition="[ButtonText=&quot;Comparați&quot;]" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If Condition="[ButtonText=&quot;Comparați&quot;]" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="If_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -207,7 +207,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <If.Then>
-                        <Sequence sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -297,7 +297,7 @@
                         </Sequence>
                       </If.Then>
                       <If.Else>
-                        <Sequence sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,83.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -359,7 +359,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{numeProdus, pret, numeFurnizor}]" DataTable="[dataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{numeProdus, pret, numeFurnizor}]" DataTable="[dataTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="AddDataRow_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -390,7 +390,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </uix:NApplicationCard>
-    <Assign sap:VirtualizedContainerService.HintSize="628,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="526.4,81.6" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataTable">[DataTableOut]</OutArgument>
       </Assign.To>
